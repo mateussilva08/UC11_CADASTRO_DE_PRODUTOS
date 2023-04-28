@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UC11_CADASTRO_DE_PRODUTOS", "UC11_CADASTRO_DE_PRODUTOS\UC11_CADASTRO_DE_PRODUTOS.csproj", "{DA93280E-3399-4C0D-99C5-6CAD61E9082F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA93280E-3399-4C0D-99C5-6CAD61E9082F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA93280E-3399-4C0D-99C5-6CAD61E9082F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA93280E-3399-4C0D-99C5-6CAD61E9082F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA93280E-3399-4C0D-99C5-6CAD61E9082F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BBBDC6A7-2E6E-4124-AB91-A96040C407AA}
+	EndGlobalSection
+EndGlobal
