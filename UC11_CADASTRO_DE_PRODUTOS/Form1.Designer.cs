@@ -36,6 +36,9 @@
             this.labelPRECO = new System.Windows.Forms.Label();
             this.buttonCADASTRAR = new System.Windows.Forms.Button();
             this.buttonLIMPAR = new System.Windows.Forms.Button();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.buttonEXCLUIR = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxDESCRICAO
@@ -119,6 +122,37 @@
             this.buttonLIMPAR.UseVisualStyleBackColor = false;
             this.buttonLIMPAR.Click += new System.EventHandler(this.buttonLIMPAR_Click);
             // 
+            // textBoxID
+            // 
+            this.textBoxID.Location = new System.Drawing.Point(27, 443);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(100, 20);
+            this.textBoxID.TabIndex = 8;
+            // 
+            // buttonEXCLUIR
+            // 
+            this.buttonEXCLUIR.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonEXCLUIR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEXCLUIR.Location = new System.Drawing.Point(151, 443);
+            this.buttonEXCLUIR.Name = "buttonEXCLUIR";
+            this.buttonEXCLUIR.Size = new System.Drawing.Size(75, 23);
+            this.buttonEXCLUIR.TabIndex = 9;
+            this.buttonEXCLUIR.Text = "Excluir";
+            this.buttonEXCLUIR.UseVisualStyleBackColor = false;
+            this.buttonEXCLUIR.Click += new System.EventHandler(this.buttonEXCLUIR_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(17, 409);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(209, 16);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Digite o id que deseja excluir";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,6 +160,9 @@
             this.BackgroundImage = global::UC11_CADASTRO_DE_PRODUTOS.Properties.Resources.bg_azul;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(538, 485);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.buttonEXCLUIR);
+            this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.buttonLIMPAR);
             this.Controls.Add(this.buttonCADASTRAR);
             this.Controls.Add(this.labelPRECO);
@@ -152,6 +189,9 @@
         private System.Windows.Forms.Label labelPRECO;
         private System.Windows.Forms.Button buttonCADASTRAR;
         private System.Windows.Forms.Button buttonLIMPAR;
+        private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.Button buttonEXCLUIR;
+        private System.Windows.Forms.Label label1;
     }
 }
 

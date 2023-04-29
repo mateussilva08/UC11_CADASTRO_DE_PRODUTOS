@@ -27,37 +27,60 @@ namespace UC11_CADASTRO_DE_PRODUTOS
 
         private void buttonCADASTRAR_Click(object sender, EventArgs e)
         {
+            bool novo_produto = true;
+
             if (textBoxDESCRICAO.Text != "" && textBoxCATEGORIA.Text != "" && textBoxPRECO.Text != "")
             {
+                
 
                 try
                 {
                     conexao.Open();
+                    comando.CommandText = "SELECT descricao_produto FROM tbl_produtos WHERE descricao_produto = '" + textBoxDESCRICAO.Text + "';";
+
+                    MySqlDataReader valida_usuario = comando.ExecuteReader();
+
+                    if (valida_usuario.Read())
+                    {
+                        novo_produto = false;
+                        MessageBox.Show("Produto já cadastrado");
+                    }
                 }
                 catch (Exception erro)
                 {
-                    MessageBox.Show(erro.Message);
+                    // MessageBox.Show(erro.Message);
+                    MessageBox.Show("Erro ao cadastrar novo produto. Fale com o administrador do sistema");
                 }
                 finally
                 {
                     conexao.Close();
                 }
 
-                try
-                {
-                    conexao.Open();
-                    comando.CommandText = "INSERT INTO tbl_produtos (descricao_produto, Categoria_Produto, Preco) VALUES ('" + textBoxDESCRICAO.Text + "', '" + textBoxCATEGORIA.Text + "','" + textBoxPRECO.Text + "');";
-                    comando.ExecuteNonQuery();
-                    MessageBox.Show("Produto cadastrado com sucesso!");
+                //------//
+
+                if (novo_produto) {
+
+                    try
+                    {
+                        conexao.Open();
+                        comando.CommandText = "INSERT INTO tbl_produtos (descricao_produto, Categoria_Produto, Preco) VALUES ('" + textBoxDESCRICAO.Text + "', '" + textBoxCATEGORIA.Text + "','" + textBoxPRECO.Text + "');";
+                        comando.ExecuteNonQuery();
+                        MessageBox.Show("Produto cadastrado com sucesso!");
+                    }
+                    catch (Exception erro)
+                    {
+                        //MessageBox.Show(erro.Message);
+                        MessageBox.Show("Erro ao cadastrar produto!");
+                    }
+                    finally
+                    {
+                        conexao.Close();
+                    }
                 }
-                catch (Exception erro)
-                {
-                    MessageBox.Show(erro.Message);
-                }
-                finally
-                {
-                    conexao.Close();
-                }
+            }
+            else
+            {
+                MessageBox.Show("preencha os campos em branco!");
             }
         }
 
@@ -71,6 +94,29 @@ namespace UC11_CADASTRO_DE_PRODUTOS
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonEXCLUIR_Click(object sender, EventArgs e)
+        {
+           try
+            {
+                
+               conexao.Open();
+               comando.CommandText = "DELETE FROM tbl_produtos WHERE id = '" + textBoxID.Text + "';";
+               comando.ExecuteNonQuery();
+                MessageBox.Show("Produto excluido com sucesso!");
+               
+
+            }
+            catch(Exception erro)
+            {
+                //MessageBox.Show(erro.Message);
+                MessageBox.Show("Erro ao excluir produto. Tente Novamente");
+            }
+            finally
+            {
+                conexao.Close();
+            }
         }
     }
 }
