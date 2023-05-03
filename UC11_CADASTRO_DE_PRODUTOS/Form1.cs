@@ -38,9 +38,9 @@ namespace UC11_CADASTRO_DE_PRODUTOS
                     conexao.Open();
                     comando.CommandText = "SELECT descricao_produto FROM tbl_produtos WHERE descricao_produto = '" + textBoxDESCRICAO.Text + "';";
 
-                    MySqlDataReader valida_usuario = comando.ExecuteReader();
+                    MySqlDataReader valida_produto = comando.ExecuteReader();
 
-                    if (valida_usuario.Read())
+                    if (valida_produto.Read())
                     {
                         novo_produto = false;
                         MessageBox.Show("Produto já cadastrado");
