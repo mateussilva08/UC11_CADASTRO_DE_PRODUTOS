@@ -63,7 +63,7 @@ namespace UC11_CADASTRO_DE_PRODUTOS
                     try
                     {
                         conexao.Open();
-                        comando.CommandText = "INSERT INTO tbl_produtos (descricao_produto, Categoria_Produto, Preco) VALUES ('" + textBoxDESCRICAO.Text + "', '" + textBoxCATEGORIA.Text + "','" + textBoxPRECO.Text + "');";
+                        comando.CommandText = "INSERT INTO tbl_produtos (descricao_produto, Categoria_Produto, Preco) VALUES ('" + textBoxDESCRICAO.Text + "', '" + textBoxCATEGORIA.Text + "','" + textBoxPRECO.Text.Replace(",", ".") + "');";
                         comando.ExecuteNonQuery();
                         MessageBox.Show("Produto cadastrado com sucesso!");
                     }
