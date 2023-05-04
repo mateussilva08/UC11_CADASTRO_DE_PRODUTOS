@@ -33,6 +33,8 @@ namespace UC11_CADASTRO_DE_PRODUTOS
             {
                 
 
+              
+                
                 try
                 {
                     conexao.Open();
@@ -148,7 +150,7 @@ namespace UC11_CADASTRO_DE_PRODUTOS
                 conexao.Close();
             }
         }
-
+ 
         private void dataGridViewPRODUTOS_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
            // textBoxID.Text = dataGridViewPRODUTOS.CurrentRow.Cells[0].Value.ToString();
@@ -157,6 +159,26 @@ namespace UC11_CADASTRO_DE_PRODUTOS
         private void dataGridViewPRODUTOS_MouseClick(object sender, MouseEventArgs e)
         {
             textBoxID.Text = dataGridViewPRODUTOS.CurrentRow.Cells[0].Value.ToString();
+        }
+
+        private void buttonALTERAR_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conexao.Open();
+                comando.CommandText = "UPDATE tbl_produtos SET preco = '" + textBoxPRECO.Text + "' WHERE id = " + textBoxCODIGO.Text + ";";
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Produto atualizado com sucesso!");
+            }
+            catch (Exception erro)
+            {
+               // MessageBox.Show(erro.Message);
+                MessageBox.Show("Erro ao atualizar produto!");
+            }
+            finally
+            {
+                conexao.Close();
+            }
         }
     }
 }

@@ -41,6 +41,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewPRODUTOS = new System.Windows.Forms.DataGridView();
             this.buttonATUALIZAR = new System.Windows.Forms.Button();
+            this.buttonALTERAR = new System.Windows.Forms.Button();
+            this.textBoxCODIGO = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPRODUTOS)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,7 +120,7 @@
             // 
             this.buttonLIMPAR.BackColor = System.Drawing.Color.WhiteSmoke;
             this.buttonLIMPAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLIMPAR.Location = new System.Drawing.Point(286, 308);
+            this.buttonLIMPAR.Location = new System.Drawing.Point(226, 354);
             this.buttonLIMPAR.Name = "buttonLIMPAR";
             this.buttonLIMPAR.Size = new System.Drawing.Size(75, 23);
             this.buttonLIMPAR.TabIndex = 7;
@@ -176,6 +179,38 @@
             this.buttonATUALIZAR.UseVisualStyleBackColor = true;
             this.buttonATUALIZAR.Click += new System.EventHandler(this.buttonATUALIZAR_Click);
             // 
+            // buttonALTERAR
+            // 
+            this.buttonALTERAR.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonALTERAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonALTERAR.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonALTERAR.Location = new System.Drawing.Point(286, 308);
+            this.buttonALTERAR.Name = "buttonALTERAR";
+            this.buttonALTERAR.Size = new System.Drawing.Size(75, 23);
+            this.buttonALTERAR.TabIndex = 13;
+            this.buttonALTERAR.Text = "Alterar";
+            this.buttonALTERAR.UseVisualStyleBackColor = false;
+            this.buttonALTERAR.Click += new System.EventHandler(this.buttonALTERAR_Click);
+            // 
+            // textBoxCODIGO
+            // 
+            this.textBoxCODIGO.Location = new System.Drawing.Point(397, 85);
+            this.textBoxCODIGO.Name = "textBoxCODIGO";
+            this.textBoxCODIGO.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCODIGO.TabIndex = 14;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(394, 50);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 16);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Codigo";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,6 +218,9 @@
             this.BackgroundImage = global::UC11_CADASTRO_DE_PRODUTOS.Properties.Resources.bg_azul;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(988, 580);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBoxCODIGO);
+            this.Controls.Add(this.buttonALTERAR);
             this.Controls.Add(this.buttonATUALIZAR);
             this.Controls.Add(this.dataGridViewPRODUTOS);
             this.Controls.Add(this.label1);
@@ -220,6 +258,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewPRODUTOS;
         private System.Windows.Forms.Button buttonATUALIZAR;
+        private System.Windows.Forms.Button buttonALTERAR;
+        private System.Windows.Forms.TextBox textBoxCODIGO;
+        private System.Windows.Forms.Label label2;
     }
 }
 
