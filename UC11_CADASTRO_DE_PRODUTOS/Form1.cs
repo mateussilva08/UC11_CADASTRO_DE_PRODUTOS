@@ -148,5 +148,15 @@ namespace UC11_CADASTRO_DE_PRODUTOS
                 conexao.Close();
             }
         }
+
+        private void dataGridViewPRODUTOS_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           // textBoxID.Text = dataGridViewPRODUTOS.CurrentRow.Cells[0].Value.ToString();
+        }
+
+        private void dataGridViewPRODUTOS_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBoxID.Text = dataGridViewPRODUTOS.CurrentRow.Cells[0].Value.ToString();
+        }
     }
 }

@@ -127,7 +127,7 @@
             // 
             // textBoxID
             // 
-            this.textBoxID.Location = new System.Drawing.Point(27, 443);
+            this.textBoxID.Location = new System.Drawing.Point(22, 473);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(100, 20);
             this.textBoxID.TabIndex = 8;
@@ -136,7 +136,7 @@
             // 
             this.buttonEXCLUIR.BackColor = System.Drawing.Color.WhiteSmoke;
             this.buttonEXCLUIR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEXCLUIR.Location = new System.Drawing.Point(151, 443);
+            this.buttonEXCLUIR.Location = new System.Drawing.Point(146, 473);
             this.buttonEXCLUIR.Name = "buttonEXCLUIR";
             this.buttonEXCLUIR.Size = new System.Drawing.Size(75, 23);
             this.buttonEXCLUIR.TabIndex = 9;
@@ -150,11 +150,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(17, 409);
+            this.label1.Location = new System.Drawing.Point(12, 439);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 16);
+            this.label1.Size = new System.Drawing.Size(244, 16);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Digite o id que deseja excluir";
+            this.label1.Text = "Digite o código que deseja excluir";
             // 
             // dataGridViewPRODUTOS
             // 
@@ -163,6 +163,8 @@
             this.dataGridViewPRODUTOS.Name = "dataGridViewPRODUTOS";
             this.dataGridViewPRODUTOS.Size = new System.Drawing.Size(395, 321);
             this.dataGridViewPRODUTOS.TabIndex = 11;
+            this.dataGridViewPRODUTOS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPRODUTOS_CellContentClick);
+            this.dataGridViewPRODUTOS.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridViewPRODUTOS_MouseClick);
             // 
             // buttonATUALIZAR
             // 
