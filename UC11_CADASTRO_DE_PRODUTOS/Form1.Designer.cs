@@ -39,6 +39,9 @@
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.buttonEXCLUIR = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridViewPRODUTOS = new System.Windows.Forms.DataGridView();
+            this.buttonATUALIZAR = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPRODUTOS)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxDESCRICAO
@@ -153,13 +156,33 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Digite o id que deseja excluir";
             // 
+            // dataGridViewPRODUTOS
+            // 
+            this.dataGridViewPRODUTOS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPRODUTOS.Location = new System.Drawing.Point(566, 85);
+            this.dataGridViewPRODUTOS.Name = "dataGridViewPRODUTOS";
+            this.dataGridViewPRODUTOS.Size = new System.Drawing.Size(395, 321);
+            this.dataGridViewPRODUTOS.TabIndex = 11;
+            // 
+            // buttonATUALIZAR
+            // 
+            this.buttonATUALIZAR.Location = new System.Drawing.Point(566, 412);
+            this.buttonATUALIZAR.Name = "buttonATUALIZAR";
+            this.buttonATUALIZAR.Size = new System.Drawing.Size(395, 23);
+            this.buttonATUALIZAR.TabIndex = 12;
+            this.buttonATUALIZAR.Text = "Atualizar";
+            this.buttonATUALIZAR.UseVisualStyleBackColor = true;
+            this.buttonATUALIZAR.Click += new System.EventHandler(this.buttonATUALIZAR_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::UC11_CADASTRO_DE_PRODUTOS.Properties.Resources.bg_azul;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(538, 485);
+            this.ClientSize = new System.Drawing.Size(988, 580);
+            this.Controls.Add(this.buttonATUALIZAR);
+            this.Controls.Add(this.dataGridViewPRODUTOS);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonEXCLUIR);
             this.Controls.Add(this.textBoxID);
@@ -174,6 +197,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPRODUTOS)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,6 +216,8 @@
         private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Button buttonEXCLUIR;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridViewPRODUTOS;
+        private System.Windows.Forms.Button buttonATUALIZAR;
     }
 }
 
