@@ -42,8 +42,6 @@
             this.dataGridViewPRODUTOS = new System.Windows.Forms.DataGridView();
             this.buttonATUALIZAR = new System.Windows.Forms.Button();
             this.buttonALTERAR = new System.Windows.Forms.Button();
-            this.textBoxCODIGO = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPRODUTOS)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,7 +118,7 @@
             // 
             this.buttonLIMPAR.BackColor = System.Drawing.Color.WhiteSmoke;
             this.buttonLIMPAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLIMPAR.Location = new System.Drawing.Point(226, 354);
+            this.buttonLIMPAR.Location = new System.Drawing.Point(167, 399);
             this.buttonLIMPAR.Name = "buttonLIMPAR";
             this.buttonLIMPAR.Size = new System.Drawing.Size(75, 23);
             this.buttonLIMPAR.TabIndex = 7;
@@ -130,7 +128,7 @@
             // 
             // textBoxID
             // 
-            this.textBoxID.Location = new System.Drawing.Point(22, 473);
+            this.textBoxID.Location = new System.Drawing.Point(398, 88);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(100, 20);
             this.textBoxID.TabIndex = 8;
@@ -139,7 +137,7 @@
             // 
             this.buttonEXCLUIR.BackColor = System.Drawing.Color.WhiteSmoke;
             this.buttonEXCLUIR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEXCLUIR.Location = new System.Drawing.Point(146, 473);
+            this.buttonEXCLUIR.Location = new System.Drawing.Point(286, 399);
             this.buttonEXCLUIR.Name = "buttonEXCLUIR";
             this.buttonEXCLUIR.Size = new System.Drawing.Size(75, 23);
             this.buttonEXCLUIR.TabIndex = 9;
@@ -153,11 +151,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(12, 439);
+            this.label1.Location = new System.Drawing.Point(444, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(244, 16);
+            this.label1.Size = new System.Drawing.Size(22, 16);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Digite o código que deseja excluir";
+            this.label1.Text = "ID";
             // 
             // dataGridViewPRODUTOS
             // 
@@ -192,25 +190,6 @@
             this.buttonALTERAR.UseVisualStyleBackColor = false;
             this.buttonALTERAR.Click += new System.EventHandler(this.buttonALTERAR_Click);
             // 
-            // textBoxCODIGO
-            // 
-            this.textBoxCODIGO.Location = new System.Drawing.Point(397, 85);
-            this.textBoxCODIGO.Name = "textBoxCODIGO";
-            this.textBoxCODIGO.Size = new System.Drawing.Size(100, 20);
-            this.textBoxCODIGO.TabIndex = 14;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(394, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 16);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Codigo";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,8 +197,6 @@
             this.BackgroundImage = global::UC11_CADASTRO_DE_PRODUTOS.Properties.Resources.bg_azul;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(988, 580);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxCODIGO);
             this.Controls.Add(this.buttonALTERAR);
             this.Controls.Add(this.buttonATUALIZAR);
             this.Controls.Add(this.dataGridViewPRODUTOS);
@@ -259,8 +236,6 @@
         private System.Windows.Forms.DataGridView dataGridViewPRODUTOS;
         private System.Windows.Forms.Button buttonATUALIZAR;
         private System.Windows.Forms.Button buttonALTERAR;
-        private System.Windows.Forms.TextBox textBoxCODIGO;
-        private System.Windows.Forms.Label label2;
     }
 }
 
