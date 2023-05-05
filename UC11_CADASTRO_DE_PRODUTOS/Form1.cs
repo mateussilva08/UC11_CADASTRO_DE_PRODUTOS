@@ -20,9 +20,42 @@ namespace UC11_CADASTRO_DE_PRODUTOS
         public Form1()
         {
             InitializeComponent();
+            textBoxID.Enabled = false;
+            
             servidor = "Server=localhost;Database=cadastro_produtos;Uid=root;Pwd=";
             conexao = new MySqlConnection(servidor);
             comando = conexao.CreateCommand();
+
+            atualizar_dataGRID();
+        }
+        private void atualizar_dataGRID()
+        {
+            try
+            {
+                conexao.Open();
+                comando.CommandText = "SELECT * FROM tbl_produtos;";
+
+                MySqlDataAdapter adaptadorPRODUTOS = new MySqlDataAdapter(comando);
+
+                DataTable tabelaPRODUTOS = new DataTable();
+                adaptadorPRODUTOS.Fill(tabelaPRODUTOS);
+
+                dataGridViewPRODUTOS.DataSource = tabelaPRODUTOS;
+                dataGridViewPRODUTOS.Columns["id"].HeaderText = "código";
+                dataGridViewPRODUTOS.Columns["descricao_produto"].HeaderText = "Descrição";
+                dataGridViewPRODUTOS.Columns["Categoria_Produto"].HeaderText = "Categoria";
+                dataGridViewPRODUTOS.Columns["Preco"].HeaderText = "Preço";
+
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
+            finally
+            {
+                conexao.Close();
+            }
         }
 
         private void buttonCADASTRAR_Click(object sender, EventArgs e)
@@ -78,6 +111,8 @@ namespace UC11_CADASTRO_DE_PRODUTOS
                     {
                         conexao.Close();
                     }
+                    
+                    atualizar_dataGRID();
                 }
             }
             else
@@ -119,6 +154,7 @@ namespace UC11_CADASTRO_DE_PRODUTOS
             {
                 conexao.Close();
             }
+            atualizar_dataGRID();
         }
 
         private void buttonATUALIZAR_Click(object sender, EventArgs e)
@@ -182,6 +218,7 @@ namespace UC11_CADASTRO_DE_PRODUTOS
             {
                 conexao.Close();
             }
+            atualizar_dataGRID();
         }
     }
 }

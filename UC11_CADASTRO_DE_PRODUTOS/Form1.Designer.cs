@@ -40,7 +40,6 @@
             this.buttonEXCLUIR = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewPRODUTOS = new System.Windows.Forms.DataGridView();
-            this.buttonATUALIZAR = new System.Windows.Forms.Button();
             this.buttonALTERAR = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPRODUTOS)).BeginInit();
             this.SuspendLayout();
@@ -167,16 +166,6 @@
             this.dataGridViewPRODUTOS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPRODUTOS_CellContentClick);
             this.dataGridViewPRODUTOS.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridViewPRODUTOS_MouseClick);
             // 
-            // buttonATUALIZAR
-            // 
-            this.buttonATUALIZAR.Location = new System.Drawing.Point(566, 412);
-            this.buttonATUALIZAR.Name = "buttonATUALIZAR";
-            this.buttonATUALIZAR.Size = new System.Drawing.Size(395, 23);
-            this.buttonATUALIZAR.TabIndex = 12;
-            this.buttonATUALIZAR.Text = "Atualizar";
-            this.buttonATUALIZAR.UseVisualStyleBackColor = true;
-            this.buttonATUALIZAR.Click += new System.EventHandler(this.buttonATUALIZAR_Click);
-            // 
             // buttonALTERAR
             // 
             this.buttonALTERAR.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -198,7 +187,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(988, 580);
             this.Controls.Add(this.buttonALTERAR);
-            this.Controls.Add(this.buttonATUALIZAR);
             this.Controls.Add(this.dataGridViewPRODUTOS);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonEXCLUIR);
@@ -234,7 +222,6 @@
         private System.Windows.Forms.Button buttonEXCLUIR;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewPRODUTOS;
-        private System.Windows.Forms.Button buttonATUALIZAR;
         private System.Windows.Forms.Button buttonALTERAR;
     }
 }
