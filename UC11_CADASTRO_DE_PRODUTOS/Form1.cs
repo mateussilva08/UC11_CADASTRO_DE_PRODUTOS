@@ -169,7 +169,7 @@ namespace UC11_CADASTRO_DE_PRODUTOS
             try
             {
                 conexao.Open();
-                comando.CommandText = "UPDATE tbl_produtos SET descricao_produto = '" + textBoxDESCRICAO.Text + "', categoria_produto = '" + textBoxCATEGORIA.Text + "', preco = " + textBoxPRECO.Text + " WHERE id = " + textBoxID.Text + ";"; 
+                comando.CommandText = "UPDATE tbl_produtos SET descricao_produto = '" + textBoxDESCRICAO.Text + "', categoria_produto = '" + textBoxCATEGORIA.Text + "', preco = " + textBoxPRECO.Text.Replace(",",".") + " WHERE id = " + textBoxID.Text + ";"; 
                 comando.ExecuteNonQuery();
                 MessageBox.Show("Produto atualizado com sucesso!");
             }
